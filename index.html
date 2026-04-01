@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My CV | Laudza Izaaz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("music");
+        const btn = document.getElementById("playBtn");
+
+        btn.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.play();
+            btn.classList.remove("bi-play-fill");
+            btn.classList.add("bi-pause-fill");
+          } else {
+            audio.pause();
+            btn.classList.remove("bi-pause-fill");
+            btn.classList.add("bi-play-fill");
+          }
+        });
+      });
+    </script>
+
+    <style>
+      /* RESET DASAR */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      /* JUMBOTRON */
+      .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 0;
+        background-color: #b2e9ff;
+      }
+
+      /* SECTION GLOBAL */
+      section {
+        padding-top: 5rem;
+        padding-bottom: 0;
+        position: relative;
+      }
+
+      /* WAVE */
+      .wave {
+        margin-top: -2px;
+        line-height: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .wave svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* BACKGROUND */
+      #porto {
+        background-color: #ffffff;
+      }
+
+      #pendidikan {
+        margin-top: -2px;
+      }
+
+      #pengalaman-organisasi,
+      #kemampuan {
+        background-color: #b2e9ff;
+      }
+
+      #kontak {
+        padding-top: 0;
+        padding-bottom: 5rem;
+        background-color: #ffffff;
+      }
+
+      /* TEXT */
+      .konten {
+        text-align: center;
+      }
+
+      .color-light {
+        color: #ffffff;
+      }
+
+      #smk,
+      #smp,
+      #sd {
+        color: black;
+        text-decoration: underline;
+      }
+
+      /* PROFILE */
+      .profile-wrapper {
+        position: relative;
+        width: 200px;
+        margin: auto;
+      }
+
+      .profile-img {
+        width: 100%;
+        transition: 0.3s ease;
+      }
+
+      .profile-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+
+      .profile-wrapper:hover .profile-overlay {
+        opacity: 1;
+      }
+
+      .profile-wrapper:hover .profile-img {
+        filter: blur(2px);
+      }
+
+      /* ICON PLAY */
+      .play-icon {
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .play-icon:hover {
+        transform: scale(1.2);
+      }
+
+      /* ========================= */
+      /* FIX CARD AGAR SAMA TINGGI */
+      /* ========================= */
+
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card-body a {
+        margin-top: auto;
+      }
+
+      /* GAMBAR PORTO FIX */
+      .porto-img {
+        width: 100%;
+        height: 200px; /* bikin semua gambar sama tinggi */
+        object-fit: cover; /* biar tidak gepeng */
+      }
+
+      /* CARD HOVER */
+      .card-hover {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      }
+
+      /* FOOTER */
+      footer {
+        color: #ffffff;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow fixed-top"
+      style="background-color: #000cb1">
+      <div class="container color-light">
+        <a class="navbar-brand fw-bold fs-4" href="#">Laudza Izaaz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Tentang</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#pendidikan">Pendidikan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#pengalaman-organisasi"
+                >Pengalaman Organisasi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#prestasi">Prestasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#kemampuan">Kemampuan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#porto">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Jumbotron -->
+
+    <section class="jumbotron">
+      <div class="konten">
+        <div class="profile-wrapper">
+          <img
+            src="/img/izz.jpg"
+            alt="Laudza izaaz"
+            class="rounded-circle img-thumbnail profile-img" />
+
+          <div class="profile-overlay">
+            <i class="bi bi-play-fill play-icon" id="playBtn"></i>
+          </div>
+        </div>
+
+        <audio id="music">
+          <source
+            src="https://raw.githubusercontent.com/Izz1011/music-storage/main/Bye-Altare29sc.mp3"
+            type="audio/mpeg" />
+        </audio>
+        <h1 class="display-4">Laudza Izaaz Ghiats Pradana</h1>
+        <p class="lead">Pelajar | Back-end Dev</p>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 mb-5 fs-5">
+            <p>
+              Saya adalah Laudza Izaaz Ghiats Pradana. Saat ini saya bersekolah
+              di SMK Negeri 1 Bawang yang berada di Desa Pucang, Kec. Bawang,
+              Kab. Banjarnegara. Saya berfokus pada pengembangan skill back-end
+              developer. Dan saya telah belajar beberapa bahasa seperti Python,
+              C#, PHP dan JavaScript.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,170.7C672,181,768,139,864,144C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+    <!-- Jumbotron End -->
+
+    <!-- Pendidikan -->
+
+    <section id="pendidikan">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>Pendidikan</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/smk.jpg"
+                class="card-img-top porto-img"
+                alt="SMKN 1 Bawang" />
+              <div class="card-body">
+                <h5 class="card-title">SMKN 1 Bawang</h5>
+                <p class="card-text text-left">
+                  Jl. Raya Pucang No.132, Blater, Pucang, Kec. Bawang, Kab.
+                  Banjarnegara, Jawa Tengah 53471
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/88Vpg8qc8Xdq1SoV7"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/smp.jpg"
+                class="card-img-top porto-img"
+                alt="SMPN 1 Bawang" />
+              <div class="card-body">
+                <h5 class="card-title">SMPN 1 Bawang</h5>
+                <p class="card-text text-left">
+                  JJ3R+CJV, Dusun I, Blambangan, Kec. Bawang, Kab. Banjarnegara,
+                  Jawa Tengah 53471
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/fof91etYknJAbwhz9"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/sd.png"
+                class="card-img-top porto-img"
+                alt="SDN 2 Gumiwang" />
+              <div class="card-body">
+                <h5 class="card-title">SDN 2 Gumiwang</h5>
+                <p class="card-text text-left">
+                  HHPW+54X, Panggang, Gumiwang, Kec. Purwanegara, Kab.
+                  Banjarnegara, Jawa Tengah 53472
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/LdViW784757yghZH8"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#b2e9ff"
+            fill-opacity="1"
+            d="M0,96L48,96C96,96,192,96,288,133.3C384,171,480,245,576,234.7C672,224,768,128,864,106.7C960,85,1056,139,1152,149.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Pendidikan End -->
+
+    <!-- Pengalaman Organisasi -->
+
+    <section id="pengalaman-organisasi">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2>Pengalaman Organisasi</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-12 mb-4">
+            <h3>404 Not Found</h3>
+            <p>Tidak ada pengalaman organisasi ditemukan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,96L48,106.7C96,117,192,139,288,149.3C384,160,480,160,576,138.7C672,117,768,75,864,96C960,117,1056,203,1152,224C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Pengalaman Organisasi End -->
+
+    <!-- Prestasi -->
+
+    <section id="prestasi">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2>Prestasi</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-12 mb-4">
+            <h2>404 Not Found</h2>
+            <p>Tidak ada prestasi ditemukan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#b2e9ff"
+            fill-opacity="1"
+            d="M0,96L48,96C96,96,192,96,288,133.3C384,171,480,245,576,234.7C672,224,768,128,864,106.7C960,85,1056,139,1152,149.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Prestais End -->
+
+    <!-- Kemampuan -->
+
+    <section id="kemampuan">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2>Kemampuan</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5">
+          <div class="col-md-3 mb-4">
+            <div class="row text-center">
+              <div class="col">
+                <h3>Softskill</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li>Rasa ingin tahu tinggi</li>
+                  <li>Pola pikir analistis</li>
+                  <li>Problem solving</li>
+                  <li>Fokus pada tujuan</li>
+                  <li>Mandiri dalam belajar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="row text-center">
+              <div class="col">
+                <h3>Hardskill</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li>Web Dev dasar (HTML, CSS, PHP)</li>
+                  <li>Logika pemrograman</li>
+                  <li>Editing simpel</li>
+                  <li>Pemahaman teknologi dasar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,128L40,154.7C80,181,160,235,240,218.7C320,203,400,117,480,117.3C560,117,640,203,720,202.7C800,203,880,117,960,96C1040,75,1120,117,1200,138.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Kemampuan End -->
+
+    <!-- Portofolio -->
+
+    <section id="porto">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>Portofolio</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/KOSka.png"
+                class="card-img-top porto-img"
+                alt="KO SKANSA UI/UX" />
+              <div class="card-body">
+                <h5 class="card-title">Kantin Online SKANSA</h5>
+                <p class="card-text text-left">
+                  Sebuah desain UI/UX untuk aplikasi kantin online SKANSA
+                </p>
+                <a
+                  href="https://www.figma.com/design/pw8xhmWgSdClfkZznUNKnx/KO-SKANSA?node-id=0-1&t=klGi1lL8BAmSwXRV-1"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/toko-oren.png"
+                class="card-img-top porto-img"
+                alt="Shopee UI/UX" />
+              <div class="card-body">
+                <h5 class="card-title">Shopee</h5>
+                <p class="card-text text-left">
+                  UI/UX halaman login dan sign dari shopee.
+                </p>
+                <a
+                  href="https://www.figma.com/design/wU7NNwYrShmk37DMqI5WyV/Shopee-UI-UX?t=klGi1lL8BAmSwXRV-1"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-hover">
+              <img
+                src="/img/LuNaRApp.png"
+                class="card-img-top porto-img"
+                alt="Login Sign UI/UX" />
+              <div class="card-body">
+                <h5 class="card-title">Login Sign Design</h5>
+                <p class="card-text text-left">
+                  Desain halaman login dan sign untuk mobile yang simpel.
+                </p>
+                <a
+                  href="https://www.figma.com/design/ohZzqMOVyWHu5COwG7qCXo/Login-Sign-UI-UX?node-id=0-1&t=klGi1lL8BAmSwXRV-1"
+                  class="btn btn-primary"
+                  >Lihat</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#000b76"
+            fill-opacity="1"
+            d="M0,224L48,202.7C96,181,192,139,288,117.3C384,96,480,96,576,128C672,160,768,224,864,234.7C960,245,1056,203,1152,176C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Portofolio End -->
+
+    <!-- Footer -->
+
+    <footer id="kontak" style="background-color: #000b76">
+      <p>Created with passion and dedication by Laudza Izaaz Ghiats Pradana</p>
+      <p>Kontak :</p>
+      <a href="https://github.com/Izz1011">
+        <i class="bi bi-github"></i> Izz1011
+      </a>
+      |
+      <a href="https://gmail.com"
+        ><i class="bi bi-envelope"></i> laudzaizaazghiatspradana@gmail.com
+      </a>
+      |
+      <a href="https://www.tiktok.com/@gewehizz?_r=1&_t=  zs-953UyQ6IHWz"
+        ><i class="bi bi-tiktok"> @gewehizz</i></a
+      >
+    </footer>
+
+    <!-- Footer End -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
