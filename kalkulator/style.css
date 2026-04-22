@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.calculator {
+  width: 340px;
+  padding: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.display {
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: right;
+}
+
+.history {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  min-height: 20px;
+}
+
+.result {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background: rgba(255,255,255,0.05);
+  box-shadow:
+    5px 5px 10px rgba(0,0,0,0.4),
+    -5px -5px 10px rgba(255,255,255,0.05);
+  transition: all 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.92);
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.number {
+  background: rgba(255,255,255,0.07);
+}
+
+.operator {
+  background: rgba(148,163,184,0.2);
+}
+
+.equals {
+  background: #22c55e;
+  grid-column: span 2;
+  box-shadow: 0 5px 20px rgba(34,197,94,0.5);
+}
+
+.clear {
+  background: #ef4444;
+  grid-column: span 2; /* 🔥 sesuai permintaan */
+  box-shadow: 0 5px 20px rgba(239,68,68,0.5);
+}
+
+.delete {
+  background: #3b82f6;
+  box-shadow: 0 5px 20px rgba(59,130,246,0.5);
+}
