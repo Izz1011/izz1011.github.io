@@ -1,0 +1,118 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY (LAYOUT KIRI) */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ⬅️ pindah ke kiri */
+
+  padding-left: 8%; /* jarak dari kiri */
+
+  background:
+    linear-gradient(to right, 
+      rgba(0,0,0,0.85) 0%,   /* kiri gelap */
+      rgba(0,0,0,0.6) 35%, 
+      rgba(0,0,0,0.2) 60%, 
+      rgba(0,0,0,0) 100%   /* kanan transparan */
+    ),
+    url("bg-login.jpg");
+
+  background-size: cover;
+  background-position: center right; /* fokus ke karakter kanan */
+
+  font-family: 'Inter', sans-serif;
+}
+
+/* LOGIN BOX (GLASS DARK ELEGANT) */
+.login-box {
+  background: rgba(20, 20, 20, 0.75); /* gelap transparan */
+  padding: 60px 50px;
+  border-radius: 18px;
+  width: 420px;
+
+  box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+  text-align: left;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TITLE */
+.login-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #f5f5f5;
+
+  margin-bottom: 35px;
+  letter-spacing: 1.5px;
+}
+
+/* LABEL TEXT */
+.login-box {
+  color: #ccc;
+  font-size: 15px;
+}
+
+/* INPUT */
+.login-box input {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0 25px 0;
+
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 15px;
+
+  transition: all 0.25s ease;
+}
+
+/* INPUT FOCUS */
+.login-box input:focus {
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.08);
+  outline: none;
+
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* BUTTON */
+.login-box button {
+  width: 100%;
+  padding: 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #2a2a2a, #444);
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.login-box button:hover {
+  background: linear-gradient(135deg, #3a3a3a, #666);
+  transform: translateY(-2px);
+}
+
+/* PLACEHOLDER */
+.login-box input::placeholder {
+  color: #aaa;
+}
