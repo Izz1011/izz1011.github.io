@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pertanyaan Maut – Tebak Kata Horor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient background layers -->
+  <div class="bg-layer bg-noise"></div>
+  <div class="bg-layer bg-vignette"></div>
+  <div class="bg-layer bg-fog" id="fog1"></div>
+  <div class="bg-layer bg-fog" id="fog2"></div>
+
+  <!-- Blood drip top -->
+  <div class="blood-drips" id="bloodDrips"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="lives-section">
+      <span class="lives-label">KESEMPATAN TERSISA:</span>
+      <div class="hearts" id="hearts"></div>
+    </div>
+    <div class="score-section">
+      <span class="score-label">SKOR</span>
+      <span class="score-value" id="scoreDisplay">0</span>
+    </div>
+  </header>
+
+  <!-- Main game area -->
+  <main class="main">
+    <h1 class="game-title">Pertanyaan Maut</h1>
+
+    <!-- Clue card -->
+    <div class="card" id="clueCard">
+      <div class="card-inner">
+        <p class="clue-text" id="clueText">Memuat...</p>
+        <div class="letter-slots" id="letterSlots"></div>
+      </div>
+      <div class="card-corner tl"></div>
+      <div class="card-corner tr"></div>
+      <div class="card-corner bl"></div>
+      <div class="card-corner br"></div>
+    </div>
+
+    <!-- Wrong letters display -->
+    <div class="wrong-section">
+      <span class="wrong-label">Huruf Salah:</span>
+      <span class="wrong-letters" id="wrongLetters"></span>
+    </div>
+
+    <!-- Keyboard -->
+    <div class="keyboard" id="keyboard"></div>
+  </main>
+
+  <!-- Overlay: Win -->
+  <div class="overlay" id="overlayWin">
+    <div class="overlay-box win-box">
+      <div class="overlay-icon">💀</div>
+      <h2 class="overlay-title">Kamu Tahu!</h2>
+      <p class="overlay-msg" id="winMsg"></p>
+      <button class="btn-next" id="btnNext">Soal Berikutnya →</button>
+    </div>
+  </div>
+
+  <!-- Overlay: Lose -->
+  <div class="overlay" id="overlayLose">
+    <div class="overlay-box lose-box">
+      <div class="overlay-icon">🩸</div>
+      <h2 class="overlay-title">Kamu Gagal!</h2>
+      <p class="overlay-msg" id="loseMsg"></p>
+      <button class="btn-next" id="btnRetry">Coba Lagi →</button>
+    </div>
+  </div>
+
+  <!-- Overlay: Game Over -->
+  <div class="overlay" id="overlayGameOver">
+    <div class="overlay-box gameover-box">
+      <div class="overlay-icon">☠️</div>
+      <h2 class="overlay-title">GAME OVER</h2>
+      <p class="overlay-msg">Nyawamu habis. Kegelapan telah menelanmu...</p>
+      <p class="score-final">Skor Akhir: <span id="finalScore">0</span></p>
+      <button class="btn-next" id="btnRestart">Mulai Ulang</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
