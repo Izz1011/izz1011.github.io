@@ -1,0 +1,15 @@
+/* Profil Desa */
+.profil-card{
+  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);
+  padding:2rem;box-shadow:var(--shadow-sm);height:100%;transition:var(--trans);
+}
+.profil-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.profil-card h4{color:var(--c-blue);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.profil-card i{color:var(--c-green);font-size:1.4rem}
+
+.visi-misi{
+  background:linear-gradient(135deg,var(--c-blue-soft),#fff);
+  padding:2.5rem;border-radius:var(--radius);border:1px solid var(--c-border);
+}
+.visi-misi ul{padding-left:1.2rem}
+.visi-misi ul li{margin-bottom:.5rem;color:#3d4a5c}

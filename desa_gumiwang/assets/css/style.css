@@ -1,0 +1,131 @@
+/* ================================
+   GLOBAL STYLE - Website Profil Desa
+   ================================ */
+:root{
+  --c-white:#ffffff;
+  --c-bg:#f7f9fc;
+  --c-gray:#6c7a89;
+  --c-gray-light:#eef2f7;
+  --c-border:#e3e8ef;
+  --c-blue:#5b8def;
+  --c-blue-soft:#eaf1fd;
+  --c-green:#6dbf9a;
+  --c-green-soft:#e7f5ee;
+  --c-text:#2b3445;
+  --c-danger:#e74c3c;
+  --shadow-sm:0 2px 8px rgba(30,40,60,.06);
+  --shadow-md:0 6px 18px rgba(30,40,60,.08);
+  --radius:14px;
+  --trans:.25s ease;
+}
+
+*{box-sizing:border-box}
+html,body{scroll-behavior:smooth}
+body{
+  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  background:var(--c-bg);
+  color:var(--c-text);
+  line-height:1.6;
+  margin:0;
+}
+
+/* Navbar */
+.navbar-desa{
+  background:var(--c-white)!important;
+  box-shadow:var(--shadow-sm);
+  padding:.8rem 0;
+}
+.navbar-desa .navbar-brand{
+  font-weight:700;
+  color:var(--c-blue)!important;
+  display:flex;align-items:center;gap:.5rem;
+}
+.navbar-desa .nav-link{
+  color:var(--c-text)!important;
+  font-weight:500;
+  margin:0 .25rem;
+  border-radius:8px;
+  padding:.5rem .9rem!important;
+  transition:var(--trans);
+}
+.navbar-desa .nav-link:hover,
+.navbar-desa .nav-link.active{
+  background:var(--c-blue-soft);
+  color:var(--c-blue)!important;
+}
+
+/* Header / Hero generic */
+.page-header{
+  background:linear-gradient(135deg,var(--c-blue-soft),var(--c-green-soft));
+  padding:4rem 0 3rem;
+  text-align:center;
+  border-bottom:1px solid var(--c-border);
+}
+.page-header h1{font-weight:700;color:var(--c-text);margin-bottom:.5rem}
+.page-header p{color:var(--c-gray);max-width:600px;margin:0 auto}
+
+/* Section */
+.section{padding:4rem 0}
+.section-title{
+  font-weight:700;
+  margin-bottom:.5rem;
+  position:relative;
+  display:inline-block;
+}
+.section-title::after{
+  content:"";display:block;width:50px;height:3px;
+  background:var(--c-blue);border-radius:3px;margin-top:.5rem;
+}
+.section-sub{color:var(--c-gray);margin-bottom:2.5rem}
+
+/* Card umum */
+.card-soft{
+  background:var(--c-white);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);
+}
+.card-soft:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+}
+
+/* Buttons */
+.btn-primary-soft{
+  background:var(--c-blue);border:none;color:#fff;
+  padding:.65rem 1.4rem;border-radius:10px;font-weight:500;
+  transition:var(--trans);
+}
+.btn-primary-soft:hover{background:#4276e0;color:#fff;transform:translateY(-2px)}
+.btn-outline-soft{
+  background:transparent;border:1px solid var(--c-blue);color:var(--c-blue);
+  padding:.65rem 1.4rem;border-radius:10px;font-weight:500;
+  transition:var(--trans);
+}
+.btn-outline-soft:hover{background:var(--c-blue);color:#fff}
+
+/* Footer */
+.footer-desa{
+  background:#1f2a3a;color:#cfd6e1;padding:3rem 0 1.5rem;margin-top:4rem;
+}
+.footer-desa h5{color:#fff;font-weight:600;margin-bottom:1rem}
+.footer-desa a{color:#cfd6e1;text-decoration:none;transition:var(--trans)}
+.footer-desa a:hover{color:var(--c-blue)}
+.footer-desa .footer-bottom{
+  border-top:1px solid #2c3a52;margin-top:2rem;padding-top:1rem;
+  text-align:center;color:#8a96a9;font-size:.9rem;
+}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(20px);transition:all .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Utility */
+.text-soft{color:var(--c-gray)}
+.bg-soft{background:var(--c-gray-light)}
+
+@media (max-width:768px){
+  .page-header{padding:3rem 0 2rem}
+  .section{padding:2.5rem 0}
+}

@@ -1,0 +1,14 @@
+/* Kontak */
+.kontak-info{
+  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);
+  padding:1.5rem;box-shadow:var(--shadow-sm);margin-bottom:1rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.kontak-info .ic{
+  width:50px;height:50px;border-radius:12px;
+  background:var(--c-blue-soft);color:var(--c-blue);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+  flex-shrink:0;
+}
+.kontak-info h6{margin:0;font-weight:600}
+.kontak-info p{margin:0;color:var(--c-gray);font-size:.9rem}

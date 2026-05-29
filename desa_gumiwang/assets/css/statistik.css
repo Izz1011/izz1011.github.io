@@ -1,0 +1,28 @@
+/* Statistik */
+.stat-card{
+  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);
+  padding:1.5rem;box-shadow:var(--shadow-sm);height:100%;
+}
+.stat-card h5{font-weight:600;color:var(--c-text);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.stat-card h5 i{color:var(--c-blue)}
+
+.progress{height:10px;border-radius:8px;background:var(--c-gray-light);margin-bottom:.4rem}
+.progress-bar{border-radius:8px;font-size:.7rem}
+
+.stat-row{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:.3rem}
+.stat-row span:last-child{color:var(--c-gray)}
+
+.chart-wrap{
+  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);
+  padding:1.5rem;box-shadow:var(--shadow-sm);
+}
+canvas{max-width:100%}
+
+.gender-box{
+  text-align:center;padding:1.2rem;border-radius:var(--radius);
+}
+.gender-box.male{background:var(--c-blue-soft)}
+.gender-box.female{background:#fde9ef}
+.gender-box .num{font-size:2rem;font-weight:700}
+.gender-box.male .num{color:var(--c-blue)}
+.gender-box.female .num{color:#d36a8b}
