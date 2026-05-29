@@ -1,0 +1,58 @@
+/* Form (kontak / daftar umkm / bantuan) */
+.form-wrap{
+  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);
+  padding:2.5rem;box-shadow:var(--shadow-sm);max-width:760px;margin:0 auto;
+}
+.form-wrap h3{font-weight:700;margin-bottom:.3rem}
+.form-wrap .subtitle{color:var(--c-gray);margin-bottom:2rem}
+
+.form-label{font-weight:500;color:var(--c-text);margin-bottom:.35rem}
+.form-label .req{color:#e67e22;margin-left:2px}
+.form-hint{font-size:.78rem;color:#9aa5b1;margin-top:.2rem;display:block}
+
+.form-control,.form-select{
+  border-radius:10px;border:1px solid var(--c-border);
+  padding:.7rem .9rem;font-size:.95rem;transition:var(--trans);
+  background:#fafbfd;
+}
+.form-control:focus,.form-select:focus{
+  border-color:var(--c-blue);
+  box-shadow:0 0 0 3px rgba(91,141,239,.15);
+  background:#fff;outline:none;
+}
+
+.form-control.is-invalid,.form-select.is-invalid{
+  border-color:var(--c-danger);background:#fff5f4;
+}
+.error-msg{
+  display:none;color:var(--c-danger);font-size:.8rem;margin-top:.3rem;
+}
+.field-error .error-msg{display:block}
+
+.btn-submit{
+  background:var(--c-blue);color:#fff;border:none;
+  padding:.8rem 2rem;border-radius:10px;font-weight:600;
+  transition:var(--trans);
+}
+.btn-submit:hover:not(:disabled){background:#4276e0;transform:translateY(-2px)}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed}
+
+/* Success modal */
+.success-modal .modal-content{
+  border:none;border-radius:18px;padding:2rem;text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,.2);
+}
+.success-icon{
+  width:80px;height:80px;border-radius:50%;
+  background:var(--c-green-soft);color:var(--c-green);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.5rem;margin:0 auto 1rem;
+  animation:popIn .4s ease;
+}
+@keyframes popIn{
+  0%{transform:scale(0);opacity:0}
+  60%{transform:scale(1.15);opacity:1}
+  100%{transform:scale(1)}
+}
+.success-modal h4{font-weight:700;margin-bottom:.4rem}
+.success-modal p{color:var(--c-gray);margin-bottom:1.5rem}

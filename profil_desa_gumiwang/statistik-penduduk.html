@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Statistik Penduduk | Desa Gumiwang</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/statistik.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-desa sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><i class="bi bi-house-heart-fill"></i> Desa Gumiwang</a
+        >
+        <button
+          class="navbar-toggler border-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profil-desa.html">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="struktur-organisasi.html">Struktur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="statistik-penduduk.html">Statistik</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >UMKM</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="informasi-umkm.html"
+                    >Informasi UMKM</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="daftar-umkm.html"
+                    >Daftarkan UMKM</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri-desa.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pengajuan-bantuan.html">Bantuan</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary-soft" href="kontak-pengaduan.html"
+                ><i class="bi bi-chat-dots me-1"></i>Kontak</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <h1>Statistik Penduduk</h1>
+        <p>Data demografi Desa Gumiwang berdasarkan pendataan terakhir.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <!-- Gender -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-6 fade-up">
+              <div class="gender-box male">
+                <i class="bi bi-gender-male" style="font-size: 2rem"></i>
+                <div class="num">4.640</div>
+                <div>Laki-laki (50,72%)</div>
+              </div>
+            </div>
+            <div class="col-md-6 fade-up">
+              <div class="gender-box female">
+                <i class="bi bi-gender-female" style="font-size: 2rem"></i>
+                <div class="num">4.508</div>
+                <div>Perempuan (49,28%)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- Pendidikan -->
+            <div class="col-md-6 fade-up">
+              <div class="stat-card">
+                <h5><i class="bi bi-mortarboard"></i> Tingkat Pendidikan</h5>
+                <div>
+                  <div class="stat-row">
+                    <span>SD / Sederajat</span><span>32%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 32%; background: #5b8def"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>SMP / Sederajat</span><span>26%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 26%; background: #6dbf9a"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>SMA / Sederajat</span><span>28%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 28%; background: #f5a962"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Diploma / Sarjana</span><span>14%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 14%; background: #9b8df0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pekerjaan -->
+            <div class="col-md-6 fade-up">
+              <div class="stat-card">
+                <h5><i class="bi bi-briefcase"></i> Pekerjaan</h5>
+                <div>
+                  <div class="stat-row">
+                    <span>Petani</span><span>38%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 38%; background: #6dbf9a"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Wiraswasta / UMKM</span><span>22%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 22%; background: #5b8def"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Karyawan Swasta</span><span>18%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 18%; background: #f5a962"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>ASN / TNI / Polri</span><span>15%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 15%; background: #d36a8b"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Lainnya</span><span>7%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7%; background: #9b8df0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Usia -->
+            <div class="col-md-6 fade-up">
+              <div class="stat-card">
+                <h5><i class="bi bi-mortarboard"></i> Usia</h5>
+                <div>
+                  <div class="stat-row">
+                    <span>Usia 0 s/d 1 Tahun</span><span>0,47%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 0, 47%; background: #5b8def"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 2 s/d 4 Tahun</span><span>2,60%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 2, 60%; background: #6dbf9a"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 5 s/d 9 Tahun</span><span>6,96%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 6, 96%; background: #f5a962"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 10 s/d 14 Tahun</span><span>7,24%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 24%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 15 s/d 19 Tahun</span><span>7,09%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 09%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 20 s/d 24 Tahun</span><span>6,66%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 6, 66%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 25 s/d 29 Tahun</span><span>7,70%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 70%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 30 s/d 34 Tahun</span><span>7,77%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 77%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 35 s/d 39 Tahun</span><span>6,97%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 6, 97%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 40 s/d 44 Tahun</span><span>7,86%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 86%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 45 s/d 49 Tahun</span><span>7,74%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 7, 74%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 50 s/d 54 Tahun</span><span>6,61%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 6, 61%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 55 s/d 59 Tahun</span><span>6,20%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 6, 20%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 60 s/d 64 Tahun</span><span>4,98%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 4, 98%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 65 s/d 69 Tahun</span><span>4,09%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 4, 09%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 70 s/d 74 Tahun</span><span>3,47%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 3, 47%; background: #9b8df0"></div>
+                  </div>
+                  <div class="stat-row">
+                    <span>Usia 75 Tahun ke atas</span><span>5,59%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      style="width: 5, 59%; background: #9b8df0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-desa">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <h5><i class="bi bi-house-heart-fill"></i> Desa Gumiwang</h5>
+            <p class="small">
+              Jln. Raya Banjarnegara - Banyumas No. 38 Gumiwang KM 12 Gumiwang,
+              Banjarnegara Kecamatan Purwanegara Kabupaten Banjarnegara Provinsi
+              Jawa Tengah Kode Pos 53472
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5>Navigasi</h5>
+            <ul class="list-unstyled small">
+              <li><a href="profil-desa.html">Profil Desa</a></li>
+              <li><a href="struktur-organisasi.html">Struktur</a></li>
+              <li><a href="statistik-penduduk.html">Statistik</a></li>
+              <li><a href="galeri-desa.html">Galeri</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Kontak</h5>
+            <p class="small mb-1">
+              <i class="bi bi-telephone"></i> 0286 - 5963286
+            </p>
+            <p class="small">
+              <i class="bi bi-envelope"></i> desagumiwang@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © <span id="year"></span> Pemerintah Desa Gumiwang.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/statistik.js"></script>
+  </body>
+</html>
